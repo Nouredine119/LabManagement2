@@ -1,0 +1,10 @@
+
+ #home{
+  background: linear-gradient(90deg,#ADA996,#F2F2F2,#DBDBDB,#EAEAEA);
+  min-height: 500px;
+ }
+
+
+.lien{
+  text-decoration: none;
+}
