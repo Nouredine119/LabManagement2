@@ -9,16 +9,6 @@ import { Alert, Button, Label, Spinner, TextInput  } from 'flowbite-react';
 
 const Login = () => {
  
-  // const handleGoogleLogin = () => {
-  //   const popupWindow = window.open('http://localhost:3001/auth/google', '_blank', 'width=500,height=600');
-
-  //   window.addEventListener('message', (event) => {
-  //     if (event.origin === 'http://localhost:3001' && event.source === popupWindow) {
-  //       console.log('Received message from popup:', event.data);
-
-  //     }
-  //   });
-  // };
 
  
   const navigate = useNavigate();

@@ -4,9 +4,45 @@
 
 body {
   height: 100vh;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+.article-content p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Helvetica', 'Arial', sans-serif; /* Add fallback fonts */
+  margin: 1.5rem 0;
+  line-height: 1.5; /* Set the line height for better readability */
+  color: #333; /* Set the text color */
+}
+
+/* Style the article headings */
+.article-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #000; 
+}
+
+.article-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: #333; 
+}
+
+.article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #555; /* Set the heading color */
+}
+.article-content a {
+  color: rgb(73, 149, 199);
+  text-decoration: none;
+}
+.article-content a:hover {
+  text-decoration: underline;
 }

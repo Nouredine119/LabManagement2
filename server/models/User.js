@@ -56,7 +56,7 @@ tokens : [
 
 },{ timestamps: true })
 
-//hashing password for security
+
 user.pre('save',async function (next) {
   if(this.isModified('password')){
     this.password = bcryptjs.hashSync(this.password,10);

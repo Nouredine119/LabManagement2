@@ -16,6 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <BrowserRouter>
+  
     <PersistGate persistor={persistor}>
       <Provider store={store}>
         <ThemeProvider>

@@ -8,3 +8,11 @@
 .lien{
   text-decoration: none;
 }
+
+.card{
+  transition: all 0.5s ease;
+}
+.card:hover{
+  cursor : pointer;
+  box-shadow: 0.5rem 1rem rgba(0, 0, 0, .15);
+}

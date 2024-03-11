@@ -14,17 +14,21 @@ import OnlyAdminProtectedRoute from './OnlyAdminProtectedRoute';
 import CreateArticle from './components/CreateArticle';
 import UpdateArticle from './components/UpdateArticle';
 import ArticlePage from './components/ArticlePage';
+import Services from './components/Services';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
 
   return (
     <>
+    <ScrollToTop/>
       <Header />
 
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/About' element={<About />} />
+        <Route path='/Services' element={<Services />} />
         <Route path='/Contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />

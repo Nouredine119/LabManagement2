@@ -29,7 +29,7 @@ const Header = () => {
   
   }
   return (
-    <Navbar>
+    <Navbar fluid rounded>
 
       <Link
         to='/'
@@ -97,11 +97,14 @@ const Header = () => {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link >
-          <Link to='/'>Home</Link>
+        <Navbar.Link>
+          <Link to='/' >Home</Link>
         </Navbar.Link>
         <Navbar.Link >
           <Link to='/about'>About</Link>
+        </Navbar.Link>
+        <Navbar.Link >
+          <Link to='/Services'>Services</Link>
         </Navbar.Link>
         <Navbar.Link >
           <Link to='/contact'>contact</Link>

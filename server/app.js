@@ -8,12 +8,13 @@ const register = require('./routes/register');
 const authGoogleRoute = require('./routes/authGoogle'); 
 const userRoute = require('./routes/userRoute'); 
 const articleRoute = require('./routes/ArticleRoute'); 
+const messageRoute = require('./routes/MessageRoute'); 
 const cors = require('cors');
 
 
 process.on('unhandledRejection', (reason, promise) => {
   console.error('Unhandled Rejection at:', promise, 'reason:', reason);
-  // Handle the rejection or log it appropriately
+ 
 });
 
 const app = express();
@@ -41,9 +42,9 @@ app.use(cookieParser());
 
 
 
-// login user
+
 app.use('/',login);
-//registration 
+
 app.use('/',register)
 
 
@@ -52,6 +53,8 @@ app.use('/',authGoogleRoute);
 app.use('/', userRoute);
 
 app.use('/', articleRoute);
+
+app.use('/', messageRoute);
 
 
 app.use((err, req, res, next) => {

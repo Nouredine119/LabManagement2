@@ -1,7 +1,8 @@
 import React from 'react';
 import About from './About';
 import Contact from './Contact';
-import './Home.css'; // Import your CSS file for styling
+import Services from './Services';
+import './Home.css'; 
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
 
      
         <About />
+        <Services />
      
         <Contact />
    
