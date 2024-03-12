@@ -35,7 +35,7 @@ const Login = () => {
 
     try {
       dispatch(signInStart());
-      const res = await fetch('/login', {
+      const res = await fetch('http://localhost:8000/login', {
         method: 'POST',
         headers: {
           "content-type": "application/json"

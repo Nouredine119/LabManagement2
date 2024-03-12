@@ -93,7 +93,7 @@ export default function DashProfile() {
     }
     try {
       dispatch(updateStart());
-      const res = await fetch(`/update/${currentUser._id}`, {
+      const res = await fetch(`http://localhost:8000/update/${currentUser._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(FormData),
@@ -117,7 +117,7 @@ export default function DashProfile() {
     setShowModal(false);
     try {
       dispatch(deleteUserStart());
-      const res = await fetch(`delete/${currentUser._id}`,{
+      const res = await fetch(`http://localhost:8000/delete/${currentUser._id}`,{
           method: 'DELETE',
       } );
       const data = await res.json();

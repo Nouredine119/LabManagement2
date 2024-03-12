@@ -26,7 +26,7 @@ const UpdateArticle = () => {
   useEffect(() => {
     try {
       const fetchArticle = async () => {
-        const res = await fetch(`/getarticles?articleId=${articleId}`);
+        const res = await fetch(`http://localhost:8000/getarticles?articleId=${articleId}`);
         const data = await  res.json();
         if (!res.ok) {
           console.log(data.message);
@@ -88,7 +88,7 @@ const UpdateArticle = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch(`/updatearticle/${formData._id}/${currentUser._id}`, {
+      const res = await fetch(`http://localhost:8000/updatearticle/${formData._id}/${currentUser._id}`, {
         method: 'PUT',
         headers: {
           'content-Type': 'application/json',

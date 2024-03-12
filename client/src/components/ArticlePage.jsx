@@ -14,7 +14,7 @@ export default function ArticlePage() {
     const fetchArticle = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`/getArticles?slug=${articleSlug}`);
+        const res = await fetch(`http://localhost:8000/getArticles?slug=${articleSlug}`);
         const data = await res.json();
         if (!res.ok) {
           setError(true);

@@ -15,7 +15,7 @@ export default function DashArticle() {
     
     const fetchUsers = async () => {
       try {
-        const res = await fetch(`/getusers`);
+        const res = await fetch(`http://localhost:8000/getusers`);
         const data = await res.json();
         console.log(data);
         if (res.ok) {
@@ -40,7 +40,7 @@ export default function DashArticle() {
 
 
       const startIndex = users.length;
-      const res = await fetch(`/getusers?startIndex=${startIndex}`);
+      const res = await fetch(`http://localhost:8000/getusers?startIndex=${startIndex}`);
       const data = await res.json();
       if (res.ok) {
         setUsers((prev) => [...prev, ...data.users]);
@@ -54,7 +54,7 @@ export default function DashArticle() {
   }
   const handleDeleteUser= async() => {
       try {
-        const res = await fetch(`/delete/${userIdToDelete}`,{
+        const res = await fetch(`http://localhost:8000/delete/${userIdToDelete}`,{
           method: 'DELETE',
         });
         const data = await res.json();

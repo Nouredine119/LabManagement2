@@ -15,7 +15,7 @@ export default function DashArticle() {
     
     const fetchArticle = async () => {
       try {
-        const res = await fetch(`/getarticles?userId=${currentUser._id}`);
+        const res = await fetch(`http://localhost:8000/getarticles?userId=${currentUser._id}`);
         const data = await res.json();
         console.log(data);
         if (res.ok) {
@@ -40,7 +40,7 @@ export default function DashArticle() {
 
 
       const startIndex = userArticle.length;
-      const res = await fetch(`/getarticles?userId=${currentUser._id}&startIndex=${startIndex}`);
+      const res = await fetch(`http://localhost:8000/getarticles?userId=${currentUser._id}&startIndex=${startIndex}`);
       const data = await res.json();
       if (res.ok) {
         setUserArticle((prev) => [...prev, ...data.articles]);

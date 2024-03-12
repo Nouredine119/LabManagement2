@@ -57,7 +57,7 @@ const CreateArticle = () => {
     e.preventDefault();
     
     try{
-     const res = await fetch('/create',{
+     const res = await fetch('http://localhost:8000/create',{
       method: 'POST',
       headers:{
         'content-Type': 'application/json',

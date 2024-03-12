@@ -18,7 +18,7 @@ const Contact = () => {
     console.log("Form Data:", message);
 
     try {
-      const res = await fetch('/message', {
+      const res = await fetch('http://localhost:8000/message', {
         method: 'POST',
         headers: {
           "Content-Type": "application/json"

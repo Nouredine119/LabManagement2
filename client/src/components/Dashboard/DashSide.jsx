@@ -21,7 +21,7 @@ export default function DashSide() {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch('/logout',{
+      const res = await fetch('http://localhost:8000/logout',{
         method: 'POST',
       });
       const data = await res.json();

@@ -12,6 +12,7 @@ const messageRoute = require('./routes/MessageRoute');
 const cors = require('cors');
 
 
+
 process.on('unhandledRejection', (reason, promise) => {
   console.error('Unhandled Rejection at:', promise, 'reason:', reason);
  
@@ -42,6 +43,9 @@ app.use(cookieParser());
 
 
 
+app.get('/',(req,res)=>{
+  res.send('hello');
+})
 
 app.use('/',login);
 
@@ -70,7 +74,7 @@ app.use((err, req, res, next) => {
 
 
 
-app.listen(3001,()=>{
+app.listen(8000,()=>{
   console.log("server is listening");
 })
 
